@@ -1,0 +1,119 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*Background related bullsh&t */
+#game{
+    width: 800px;
+    height:500px;
+    border: 10px solid black;
+}
+
+#celling{
+    width:800px;
+    height:100px;
+    background-color: black;
+    position: relative;
+    top: 100px;
+    
+}
+/*Character related bullsh&t */
+#character{
+    width: 60px;
+    height: 100px;
+    position: relative;
+    top:400px;
+    left:300px;
+}
+
+
+
+.skipping {
+    animation: skipping 0.5s infinite;
+}
+
+.animateUp{
+    animation: goUp 0.3s linear;
+}
+.animateDown{
+    animation: goDown 0.3s linear;
+}
+.animateForward{
+    animation: goForward 2s linear;
+}
+
+@keyframes skipping {
+    0% {
+        background: url(Assets/Ali_idle.png);
+    }
+    100% {
+        background: url(Assets/Ali_Skipping.png);
+    }
+}
+
+@keyframes goUp{
+    from {
+        transform: translatey(0px);
+        background: url(Assets/Ali_Up.png);
+      }
+      to {
+        transform: translatey(-300px);
+        background: url(Assets/Ali_idle.png);
+      }
+    }
+@keyframes goDown{
+    from {
+        transform: translatey(0px);
+        background: url(Assets/Ali_Down.png);
+      }
+      to {
+        transform: translatey(0px);
+        background: url(Assets/Ali_idle.png);
+      }
+}
+@keyframes goForward{
+    from {
+        background: url(Assets/Ali_Forward.png);
+        width: 80px;
+      }
+      to {
+        background: url(Assets/Ali_idle.png);
+        width: 60px;
+      }
+}
+
+/*Obstacle related bullsh&t */
+#spikeTop{
+    width: 96px;
+    height: 96px;
+    background: url(Assets/Spike.png);
+    position: relative;
+    top: -190px;
+    left: 710px;
+    animation: spikeTop 2.5s infinite linear;
+    animation-delay: 6.60s;
+}
+
+@keyframes spikeTop{
+    0%{left:710px;}
+    100%{left:-200px}
+}
+#spikeBottom{
+    width: 96px;
+    height: 96px;
+    background: url(Assets/Spike.png);
+    position: relative;
+    top: 205px;
+    left: 710px;
+    animation: spikeBottom 1.5s infinite linear;
+    animation-delay: 0.9s;
+}
+
+@keyframes spikeBottom{
+
+    0%{left:720px;}
+    100%{left:-200px}
+}
