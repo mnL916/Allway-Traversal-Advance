@@ -84,7 +84,7 @@ function logOnKeyPress(event) {
             }, 400);
         }
     }
-    if (event.key.toLowerCase() === 'd' && activePoints >= 100) {
+    if (event.key.toLowerCase() === 'd' && activePoints >= 70) {
         character.classList.add("animateForward");
         setTimeout(function() {
             character.classList.remove("animateForward");},340);
@@ -97,7 +97,7 @@ function logOnKeyPress(event) {
          canPressW = true;
         }, 400);
         setTimeout(() => {isInvincible = false;}, 600);
-        activePoints -= 100;
+        activePoints -= 70; // Changed required AP to 70, trying to give players the chance to keep going, should they play perfectly
     }
   }
 
@@ -127,7 +127,6 @@ function TopCollisions () { /*These two functions are some serious yandere-dev b
             if ((isTop == true && TopCollision == true) && isInvincible != true) {
                 isGameOver = true;
                 window.alert(`You got ${points} pts. If the top spike syncs with the bottom one, traverse forward!`);
-                window.location.reload();
             }
             if (TopCollision == true) {
                 setTimeout(TopCollision = false, 130);
@@ -149,8 +148,7 @@ function BottomCollisions () {
         }
         if ((isTop == false && BottomCollision == true) && isInvincible != true) {
             isGameOver = true;
-            window.alert(`You got ${points} pts. Remember the lower spike is faster!`);
-            window.location.reload();
+            window.alert(`You got ${points} pts. Remember the lower spike is faster!`)
         }
         if (BottomCollision == true) {
             setTimeout(BottomCollision = false, 130);
@@ -167,6 +165,12 @@ function addPoints() { /*Adds 5 points to the scores each half second. Could be 
         activePoints += 5;
         document.getElementById("Total").innerHTML = `Your Total Points: ${points}`;
         document.getElementById("Active").innerHTML = `AP Available: ${activePoints}`;
+        if (activePoints < 70) { // Makes the AP text flash red and gives notice so people notice they cannot dash. SOMEHOW A PROBLEM.
+            document.getElementById("Active").style.color = "Red";
+            document.getElementById("Active").innerHTML = `AP Available: ${activePoints} (Dash Unavailable!)`;
+        } else {
+            document.getElementById("Active").style.color = "Black";
+        }
     }
 }
 

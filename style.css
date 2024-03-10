@@ -3,13 +3,17 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: "Arial";
+    text-align:center;
 }
 
 /*Background related bullsh&t */
 #game{
     width: 800px;
     height:500px;
+    margin-left: 27.5%;
     border: 10px solid black;
+    background-color: aquamarine;
 }
 
 #celling{
@@ -99,7 +103,7 @@
 
 @keyframes spikeTop{
     0%{left:710px;}
-    100%{left:-200px}
+    100%{left:-15px}
 }
 #spikeBottom{
     width: 96px;
@@ -115,5 +119,34 @@
 @keyframes spikeBottom{
 
     0%{left:720px;}
-    100%{left:-200px}
+    100%{left:-15px}
+}
+
+h1 {
+    font-size: 64px;
+    padding-top: 20px;
+}
+
+h2{
+    font-size: 32px;
+}
+
+p{
+    font-size: 20px;
+    margin-left: 27.5%;
+    margin-right: 27.5%;
+}
+
+#PlayButton{
+    font-size: 84px;
+    border: 16px, solid, green;
+    background-color: lime;
+    margin-bottom: 52px;
+    margin-left: 27.5%;
+    margin-right: 27.5%;
+}
+
+a{
+    text-decoration: none;
+    color:white;
 }
