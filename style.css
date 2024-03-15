@@ -1,10 +1,14 @@
-
+@font-face {
+    font-family: garfield;
+    src: url(KodeMono-Regular.ttf);
+}
 
 *{
     padding: 0;
     margin: 0;
-    font-family: "Arial";
-    text-align:center;
+    font-family: garfield;
+    background-color: black;
+    color: white;
 }
 
 /*Background related bullsh&t */
@@ -47,6 +51,9 @@
 }
 .animateForward{
     animation: goForward 2s linear;
+}
+.bgPulse{
+    animation: bgPulse 1s linear;
 }
 
 @keyframes skipping {
@@ -149,4 +156,13 @@ p{
 a{
     text-decoration: none;
     color:white;
+}
+
+@keyframes bgPulse{
+    0% {
+        background-color: greenyellow;
+      }
+      100% {
+        background-color: black;
+      }
 }
