@@ -130,12 +130,13 @@
 h1 {
     font-size: 64px;
     padding-top: 20px;
-    text-align: center;
+    margin-left: 27.5%
 }
 
 h2{
     font-size: 32px;
-    text-align: center;
+    margin-left: 27.5%;
+    color: white;
 }
 
 p{
