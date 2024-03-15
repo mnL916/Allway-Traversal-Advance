@@ -171,7 +171,7 @@ function addPoints() { /*Adds 5 points to the scores each half second. Could be 
             document.getElementById("Active").style.color = "Red";
             document.getElementById("Active").innerHTML = `AP Available: ${activePoints} (Dash Unavailable!)`;
         } else {
-            document.getElementById("Active").style.color = "Black";
+            document.getElementById("Active").style.color = "White";
         }
     }
 }
