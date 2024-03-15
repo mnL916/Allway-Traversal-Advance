@@ -4,8 +4,6 @@
 }
 
 *{
-    padding: 0;
-    margin: 0;
     font-family: garfield;
     background-color: black;
     color: white;
@@ -132,10 +130,12 @@
 h1 {
     font-size: 64px;
     padding-top: 20px;
+    text-align: center;
 }
 
 h2{
     font-size: 32px;
+    text-align: center;
 }
 
 p{
