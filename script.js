@@ -93,12 +93,12 @@ function logOnKeyPress(event) {
         /*Delay */
         canPressW = false;
         isInvincible = true;
-        document.body.classList.add("bgPulse");
+        document.getElementById("game").classList.add("bgPulse");
         setTimeout(() => {
          canPressW = true;
         }, 400);
         setTimeout(() => {isInvincible = false;}, 600);
-        setTimeout(() => {document.body.classList.remove("bgPulse")}, 600);
+        setTimeout(() => {document.getElementById("game").classList.remove("bgPulse")}, 600);
         activePoints -= 70; // Changed required AP to 70, trying to give players the chance to keep going, should they play perfectly
     }
   }
